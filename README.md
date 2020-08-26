@@ -22,21 +22,35 @@ SO THAT I can plan a trip accordingly
 
 ```
 1. GIVEN a weather dashboard with form inputs
+    a. weather dashboard
+    b. form inputs
 
 2. WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
+    a. Current Weather Data
+    b. (Save future for step 5)
 
 3. WHEN I view current weather conditions for that city
 THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+    a. city name
+    b. date
+    c. icon of weather conditions
+    d. temperature
+    e. humidity
+    f. wind speed
+    g. UV index
 
 4. WHEN I view the UV index
 THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+    a. Color must be 1 of 3 values: favorable, moderate, or severe
 
 5. WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+    a. 5 day/ 3 hour weather data forecast
 
 6. WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
+    a. search history?? local storage?
 
 7. WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
