@@ -1,5 +1,23 @@
 #header {
+    padding-top: 2%;
+    padding-bottom: 6%;
+    margin-bottom: 4%;
     text-align: center;
+    text-shadow: 2px 2px #000000;
     background-color: grey;
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+
+
+h1 {
+    padding-top: 2%;
+    color: #b66e09 !important;
+    text-align: center; 
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px #dce6e6;
+    margin: auto;
+    border: 2rem;
 }
