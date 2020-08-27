@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chambers'  Weather Dashboard</title>
     <!-- website icon -->
-    <link rel="icon" href="Assets/world.ico">
+    <link rel="icon" href="./Assets/world.ico">
     <!-- Linking CSS -->
-    <link rel="stylesheet" href="styles.css"
-    <!-- Using Materialize instead of Bootstrap but have commented out just in case -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using Materialize instead of Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
-  <!-- <h1>The Best Weather Dashboard Ever!</h1> -->
 
   <div class="row">
     <nav class="brand-logo center" id="header">The Best Weather Dashboard Ever!</nav>
@@ -29,22 +28,31 @@
           <label for="icon_prefix2">Enter City Name</label>
         </div>
         <div class="input-field col s1">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
+          <!-- Submit button -->
+          <button class="btn waves-effect waves-light" type="submit" name="action">Send
+            <i class="material-icons right"></i>
           </button>
         </div>
       </div>
     </form>
   </div>
 
+
+
   
 
- 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
 <script type="text/javascript">
-
+  //a list of all of all global variables
+  var APIkey = '791be6485aaafb03d9321576efe4bcca';
+  var forecastAPI = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+  var weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?';
+  
+   
+  
 
 </script>
+
+
 </body>
 </html>
