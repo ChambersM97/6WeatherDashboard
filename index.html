@@ -11,7 +11,7 @@
     <!-- Using Materialize instead of Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Link jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -24,34 +24,61 @@
         <div class="input-field col s4"></div>
         <div class="input-field col s4 ">
           <i class="material-icons prefix"><img class="prefix" src="./Assets/mglass.png"></i>
-          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-          <label for="icon_prefix2">Enter City Name</label>
+          <input id="icon_prefix2" class="materialize-textarea"></input>
+          <label for="icon_prefix2"></label>
         </div>
         <div class="input-field col s1">
           <!-- Submit button -->
-          <button class="btn waves-effect waves-light" type="submit" name="action">Send
+          <button class="btn waves-effect waves-light" id="sendBtn" type="submit" name="action">Send
             <i class="material-icons right"></i>
           </button>
         </div>
       </div>
     </form>
+    <div id="weatherData">
+    </div>
   </div>
 
 
 
   
 
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+  $(document).ready(function (){
   //a list of all of all global variables
   var APIkey = '791be6485aaafb03d9321576efe4bcca';
   var forecastAPI = 'https://api.openweathermap.org/data/2.5/forecast?q=';
-  var weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?';
+  var weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?q=';
+
+  function weather(event) {
+      event.preventDefault();
+      var cityName = $('#icon_prefix2').val();
+      var queryURL = weatherAPI + cityName + "&appid=" + APIkey;
+      console.log(queryURL);
+
+      $.ajax({
+        url: queryURL, 
+        method: "GET"
+      }).then(function (response){
+        var temp = $("<p>").text("Temp: " + response.main.temp )
+          $("#weatherData").append(temp)
+        
+      })
+  }
+
+
+
+  // similar to document.getElementById or document.querySelector
+  $('#sendBtn').on('click', weather);
+
+
   
    
   
-
+  });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </body>
